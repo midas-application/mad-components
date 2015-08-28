@@ -1,0 +1,233 @@
+.icon-arrowr {
+	background-image: url(http://imgcache.gtimg.cn/bossweb/h5pay/images/mqq/icon-arrowr.png);
+	background-position: 0 0;
+	background-repeat: no-repeat;
+	width: 32px;
+	height: 32px;
+	background-size: contain;
+	display: inline-block;
+	vertical-align: middle;
+}
+.mod-list .detail-group:hover{
+	cursor: pointer;
+}
+.tencent-payment-gamelist .game {
+	position: relative;
+}
+.tencent-payment-gamelist article {
+	height: 100%;
+	min-width: 320px;
+	background: #efeff4;
+}
+.tencent-payment-gamelist  .mod-list {
+	background: #fff;
+	border-bottom: 1px solid #dedede;
+}
+.tencent-payment-gamelist  .mod-list {
+	border-top: 1px solid #dedede;
+}
+.tencent-payment-gamelist .mod-list li:last-child {
+	border-bottom: none;
+}
+.tencent-payment-gamelist .mod-list li {
+	border-bottom: 1px solid #dcdcdc;
+	font-size: 14px;
+	padding-left: 10px;
+	position: relative;
+}
+.tencent-payment-gamelist .game-list .detail-logo {
+	width: 45px;
+	height: 45px;
+	line-height: 45px;
+	display: block;
+	border: 1px solid #dfdfdd;
+	margin: 10px 15px 0 0;
+	float: left;
+}
+.tencent-payment-gamelist .game-list .detail-title h3 {
+	font-weight: 700;
+	font-size: 15px;
+	margin-top: 10px;
+}
+.tencent-payment-gamelist .mod-list .detail-title h3 {
+	font-size: 16px;
+	font-weight: 200;
+}
+.tencent-payment-gamelist .mod-list li:last-child .detail-group {
+	border-bottom: none;
+}
+.tencent-payment-gamelist .mod-list .detail-group {
+	padding: 15px 0 10px;
+	font-size: 14px;
+}
+.tencent-payment-gamelist .game-list .detail-logo img {
+	vertical-align: middle;
+	display: inline-block;
+}
+.tencent-payment-gamelist img {
+	background-size: contain;
+}
+.tencent-payment-gamelist .mod-list h2 {
+	background: #f0f0f6;
+	color: gray;
+	font-size: 14px;
+	line-height: 22px;
+	font-weight: 400;
+	padding-left: 15px;
+}
+.tencent-payment-gamezonectl{
+	width: 100%; 
+	height: 100%; 
+	position: absolute; 
+	left: 0px; 
+	top: 0px;
+}
+/*game zone*/
+.tencent-payment-gamezone .control-group {
+	margin-bottom: 20px;
+	position: relative;
+	font-size: 15px;
+}
+.tencent-payment-gamezone .control-label {
+	float: left;
+	width: 110px;
+	text-align: left;
+	color: #000;
+	padding-top: 14px;
+	padding-left: 15px;
+}
+.tencent-payment-gamezone .control-group .turn-right {
+	position: absolute;
+	right: 0;
+	top: 7px;
+	width: 32px;
+	height: 32px;
+	display: block;
+	text-align: center;
+	line-height: 32px;
+}
+.tencent-payment-gamezone .control-group .turn-right i {
+	margin: 0;
+	vertical-align: middle;
+}
+.tencent-payment-gamezone .control-group .detail-title {
+	padding: 14px 0;
+}
+.tencent-payment-gamezone .field-group {
+	border-top: 1px solid #dedede;
+	border-bottom: 1px solid #dedede;
+	margin-bottom: 20px;
+	background: #fff;
+}
+.tencent-payment-gamezone .field-group .control-group {
+	margin-left: 10px;
+	border-bottom: 1px solid #dedede;
+	margin-bottom: 0;
+}
+.tencent-payment-gamezone .field-group .control-group:last-child {
+	border-bottom: none;
+}
+.tencent-payment-gamezone .field-group .control-group .control-label {
+	padding-left: 0;
+}
+.tencent-payment-gamezone .control-group .controls {
+	margin-left: 110px;
+}
+.tencent-payment-gamezone .controls {
+	margin-left: 120px;
+	margin-right: 32px;
+}
+/*game server*/
+.tencent-payment-gameserver header {
+	height: 44px;
+	line-height: 44px;
+	background-color: #fff;
+	border-bottom: 1px solid #d9d9d9;
+	position: relative;
+}
+.tencent-payment-gameserver header .turn-l {
+	color: #00a5e0;
+	left: 10px;
+}
+.tencent-payment-gameserver header .back, 
+.tencent-payment-gameserver header .turn-l {
+	position: absolute;
+	left: 0;
+	text-align: center;
+	height: 44px;
+	line-height: 44px;
+}
+.tencent-payment-gameserver header .title {
+	position: absolute;
+	left: 41px;
+	right: 41px;
+}
+.tencent-payment-gameserver header .turn-l {
+	color: #00a5e0;
+	left: 10px;
+}
+.tencent-payment-gameserver header .title h1 {
+	-moz-text-shadow: 0 1px 1px #fff;
+	text-shadow: 0 1px 1px #fff;
+	color: gray;
+	font-size: 15px;
+	text-align: center;
+	font-weight: 400;
+	padding: 0 5px;
+	position: absolute;
+	left: 0;
+	right: 0;
+	height: 44px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.tencent-payment-gameserver .article {
+	height: 100%;
+	min-width: 320px;
+	background: #efeff4;
+}
+.tencent-payment-gameserver .game-place .mod-list {
+	border-top: none;
+}
+.tencent-payment-gameserver .mod-list {
+	background: #fff;
+	border-bottom: 1px solid #dedede;
+}
+.tencent-payment-gameserver .mod-list {
+	border-top: 1px solid #dedede;
+}
+.tencent-payment-gameserver .mod-list li {
+	border-bottom: 1px solid #dcdcdc;
+	font-size: 14px;
+	padding-left: 10px;
+	position: relative;
+}
+.tencent-payment-gameserver .mod-list li:last-child .detail-group {
+	border-bottom: none;
+}
+.tencent-payment-gameserver .mod-list .detail-group .icon-arrowr {
+	position: absolute;
+	right: 0;
+	top: 10px;
+}
+.tencent-payment-gameserver .mod-list .detail-group {
+	padding: 15px 0 10px;
+	font-size: 14px;
+}
+.tencent-payment-gameserver header .title h1 {
+	-moz-text-shadow: 0 1px 1px #fff;
+	text-shadow: 0 1px 1px #fff;
+	color: gray;
+	font-size: 15px;
+	text-align: center;
+	font-weight: 400;
+	padding: 0 5px;
+	position: absolute;
+	left: 0;
+	right: 0;
+	height: 44px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}

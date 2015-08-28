@@ -1,0 +1,74 @@
+.icon-del {
+	background-image: url(http://imgcache.gtimg.cn/bossweb/h5pay/images/icon-deltext-v2.png?v=2);
+	background-color: none;
+	background-size: contain;
+	width: 16px;
+	height: 16px;
+	display: block;
+}
+.tencent-payment-searchinput .search-bar{
+	background: #edf0ee;
+	padding: 10px;
+	position: relative;
+}
+.tencent-payment-searchinput .search-bar .search-input{
+	background: #fff;
+	height: 30px;
+	line-height: 26px;
+	position: relative;
+	border-radius: 3px;
+	margin-right: 60px;
+}
+.tencent-payment-searchinput .search-before .search-input{
+	width: 100%;
+	text-align: center;
+}
+.tencent-payment-searchinput .search-bar .search-input input {
+	width: 82%;
+	height: 100%;
+}
+.tencent-payment-searchinput .search-before .search-input input {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	background: 0 0;
+}
+.tencent-payment-searchinput .search-bar .search-input i {
+	vertical-align: middle;
+}
+.tencent-payment-searchinput .search-bar .search-input .icon-search {
+	width: 20px;
+	height: 20px;
+	margin-left: 5px;
+	display: inline-block;
+	background: url(http://imgcache.gtimg.cn/bossweb/h5pay/images/payh5_v2/icon-search.png) no-repeat;
+	background-size: contain;
+}
+
+.tencent-payment-searchinput .search-bar .search-input span{
+	display: none;
+}
+.tencent-payment-searchinput .search-before .search-input span{
+	color: gray;
+	line-height: 30px;
+	display: inline-block;
+}
+.tencent-payment-searchinput .search-bar .search-input .icon-del{
+	position: absolute;
+	top: 7px;
+	right: 5px;
+}
+.tencent-payment-searchinput .search-before button {
+	display: none;
+}
+.tencent-payment-searchinput .search-bar button {
+	color: #00a5e0;
+	line-height: 30px;
+	font-size: 16px;
+	position: absolute;
+	right: 10px;
+	width: 60px;
+	top: 10px;
+}
