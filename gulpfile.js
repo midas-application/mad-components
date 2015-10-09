@@ -42,7 +42,7 @@ gulp.task('css:components',function() {
 gulp.task('js:components',function() {
     gulp.src(file.components.js).
         pipe(gulpif(task=="min",uglify())).
-        pipe(gulp.dest('./components/'));
+        pipe(gulp.dest('./'));
 });
 gulp.task('watch', function() {
     gulp.watch(file.components.less, ['css:reset',"css:components"]);
@@ -52,5 +52,5 @@ gulp.task('local',['css:reset',"css:components","watch"]);
 gulp.task('build',["js:components","css:components"],function(){
     gulp.src(file.components.css).
         pipe(gulpif(task=="min",minifyCss({noAdvanced: true,rebase: false}))).
-        pipe(gulp.dest('./components/'));
+        pipe(gulp.dest('./'));
 });
