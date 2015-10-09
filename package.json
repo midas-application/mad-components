@@ -1,0 +1,36 @@
+{
+  "name": "mad-ui-libs",
+  "version": "1.0.0",
+  "description": "mad ui libs",
+  "main": "dist/madui.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://git.code.oa.com/timlv/mad-ui-libs.git"
+  },
+  "keywords": [
+    "mad",
+    "ui",
+    "mobile"
+  ],
+  "author": "timlv",
+  "license": "ISC",
+  "dependencies": {
+    "gulp-if": "^1.2.5",
+    "gulp-less": "^3.0.3",
+    "gulp-minify-css": "^1.2.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^1.2.0",
+    "mad-util": "0.0.7",
+    "minimist": "^1.1.2"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-cli": "^0.3.0",
+    "gulp-cmd-transport": "^0.1.2",
+    "gulp-concat-util": "^0.5.2",
+    "gulp-uglify": "^1.2.0"
+  }
+}

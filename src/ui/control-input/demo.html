@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta content="telephone=no" name="format-detection"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta content="email=no" name="format-detection"/>
+    <meta name="apple-mobile-web-status-bar-style" content="black"/>
+    <meta name="applicable-device" content="mobile">
+    <meta name="author" content="Tencent-TEG"/>
+    <meta name="Robots" contect= "all">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <title>control input</title>
+    <link href="../../reset.css" rel="stylesheet" type="text/css">
+    <link href="controlinput.active.css" rel="stylesheet" type="text/css">
+    <style type="text/css">
+        .container{
+            text-align:center;
+            background: #70c9f2;
+        }
+    </style>
+</head>
+<body>
+<div class="container"></div>
+</body>
+<script type="text/javascript" charset="utf-8" src="../../sea.js"></script>
+<script type="text/javascript">
+    seajs.config({
+        base : './'
+    });
+</script>
+<script type="text/javascript">
+    seajs.use(["controlinput"],function(Component){
+        var uiComponent = new Component(document.getElementsByClassName("container")[0],{
+            showHandelChar:false,
+            label:null
+        },{
+
+        });
+    });
+</script>
+</html>

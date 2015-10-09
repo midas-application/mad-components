@@ -1,0 +1,64 @@
+@import "../../mixins/vendor-prefixes.less";
+.mad-ui-controlinput{
+  .control-label{
+    text-align: left;
+    display: block;
+    color: #808080;
+    font-size: 14px;
+    float: none;
+    margin-bottom: 5px;
+    padding: 0px 0 0 15px;
+    width: auto;
+  }
+  .controls{
+    .duration{
+      a{
+        width: 36px;
+        height: 36px;
+        display: inline-block;
+        vertical-align: middle;
+        margin: 10px;
+        &.icon-increase, &.icon-reduce {
+          background: url("http://imgcache.gtimg.cn/bossweb/mqq/images/active/20150424_askqb/sprin.png") no-repeat;
+        }
+        &.icon-reduce {
+          background-size: 140px auto;
+          background-position: 0 -79px;
+        }
+        &.icon-increase {
+          background-size: 140px auto;
+          background-position: 0 -40px;
+        }
+        text-decoration: none;
+        .box-sizing(border-box);
+      }
+      div{
+        line-height: 36px;
+        font-size: 18px;
+        background: #fff;
+        height: 36px;
+        width: 45%;
+        display: inline;
+        text-align: center;
+        border-radius: 30px;
+        padding: 7px 0;
+        vertical-align: middle;
+        color: #333;
+        &.focus{
+          border-color: #00a5e0
+        }
+        input{
+          .box-sizing(border-box);
+          width: 50%;
+          padding: 10px 0;
+          text-align: center;
+          font-size: 18px;
+          border: 0;
+          margin: 0;
+          background: none;
+          outline: none;
+        }
+      }
+    }
+  }
+}

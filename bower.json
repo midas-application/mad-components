@@ -1,0 +1,31 @@
+{
+  "name": "mad-ui-libs",
+  "version": "0.0.1",
+  "authors": [
+    "timlv <timlv@tencent.com>"
+  ],
+  "description": "mad ui libs",
+  "main": "components.js",
+  "keywords": [
+    "mad",
+    "ui"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "core": "http://git.code.oa.com/timlv/mad-util.git#0.0.7"
+  },
+  "ignore": [
+    "bin",
+    "src",
+    "dist",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    ".bowerrc",
+    ".gitignore",
+    "gulpfile.js",
+    "package.json",
+    "README.md"
+  ]
+}
