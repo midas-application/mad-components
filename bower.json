@@ -1,10 +1,10 @@
 {
-  "name": "mad-ui-libs",
+  "name": "mad-components",
   "version": "0.0.1",
   "authors": [
     "timlv <timlv@tencent.com>"
   ],
-  "description": "mad ui libs",
+  "description": "mad module libs",
   "main": "components.js",
   "keywords": [
     "mad",
@@ -12,7 +12,7 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "core": "http://git.code.oa.com/timlv/mad-util.git#0.0.7"
+    "util": "http://git.code.oa.com/timlv/mad-util.git#0.0.7"
   },
   "ignore": [
     "bin",

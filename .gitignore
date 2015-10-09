@@ -1,10 +1,11 @@
+*.xml
 *.idea
 .bowerrc
 .idea
 .cache
 idea
 node_modules/
-dist/
+src/util/
 static/js/template/
 static/js/mod/mqqdebug.js
 

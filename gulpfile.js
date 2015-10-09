@@ -6,18 +6,18 @@ var uglify = require('gulp-uglify');
 var gulpif = require('gulp-if');
 var minifyCss = require('gulp-minify-css');
 var argv = require('minimist')(process.argv.slice(2));
-var cwd = "src/",task = "src";
-if(argv._&&argv._.length>0&&argv._[0]=='ui'){
+var task = "src";
+if(argv._&&argv._.length>0&&argv._[0]=='build'){
     task=argv.s?"src":"min";
 }
 var file = {
     reset:{
         less:["src/reset.less"]
     },
-    ui:{
-        js:["src/ui/**/*.js"],
-        less:["src/ui/**/*.less"],
-        css:["src/ui/**/*.css"]
+    components:{
+        js:["src/components/**/*.js"],
+        less:["src/components/**/*.less"],
+        css:["src/components/**/*.css"]
     }
 };
 //for demo
@@ -30,27 +30,27 @@ gulp.task('css:reset',function() {
         }))
         .pipe(gulp.dest("src/"));
 });
-gulp.task('css:ui',function() {
-    return gulp.src(file.ui.less)
+gulp.task('css:components',function() {
+    return gulp.src(file.components.less)
         .pipe(less())
         .pipe(rename(function(path){
             path.extname = ".css";
             return path;
         }))
-        .pipe(gulp.dest("src/ui/"));
+        .pipe(gulp.dest("src/components/"));
 });
-gulp.task('js:ui',function() {
-    gulp.src(file.ui.js).
+gulp.task('js:components',function() {
+    gulp.src(file.components.js).
         pipe(gulpif(task=="min",uglify())).
-        pipe(gulp.dest('./ui/'));
+        pipe(gulp.dest('./components/'));
 });
 gulp.task('watch', function() {
-    gulp.watch(file.ui.less, ['css:reset',"css:ui"]);
+    gulp.watch(file.components.less, ['css:reset',"css:components"]);
 });
-gulp.task('local',['css:reset',"css:ui","watch"]);
+gulp.task('local',['css:reset',"css:components","watch"]);
 //build
-gulp.task('build',["js:ui","css:ui"],function(){
-    gulp.src(file.ui.css).
+gulp.task('build',["js:components","css:components"],function(){
+    gulp.src(file.components.css).
         pipe(gulpif(task=="min",minifyCss({noAdvanced: true,rebase: false}))).
-        pipe(gulp.dest('./ui/'));
+        pipe(gulp.dest('./components/'));
 });
