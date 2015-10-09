@@ -1,6 +1,6 @@
 {
   "name": "mad-ui-libs",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "mad ui libs",
   "main": "dist/madui.js",
   "scripts": {
