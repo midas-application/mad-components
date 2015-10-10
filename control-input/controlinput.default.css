@@ -1,1 +1,97 @@
-.mad-ui-controlinput .control-label{text-align:left;display:block;color:grey;font-size:14px;float:none;margin-bottom:5px;padding:0 0 0 15px;width:auto}.mad-ui-controlinput .controls .duration a,.mad-ui-controlinput .controls .duration div{height:42px;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;display:inline-block}.mad-ui-controlinput .controls{position:relative}.mad-ui-controlinput .controls .duration{margin-left:15px;margin-right:0;position:relative;padding-left:70px;padding-right:70px;width:40%}.mad-ui-controlinput .controls .duration a{text-decoration:none;word-wrap:break-word;border-top:thin solid #d6d6d6;border-bottom:thin solid #d6d6d6;border-left:thin solid #d6d6d6;background-color:#fcfcfc;background-image:-webkit-gradient(linear,0 0,0 100%,from(#fff),to(#f5f5f5));background-image:-moz-linear-gradient(center top,#fff,#f5f5f5);-moz-border-radius:2px 0 0 2px;border-radius:2px 0 0 2px;-webkit-box-shadow:0 1px 1px rgba(255,255,255,.2) inset;box-shadow:0 1px 1px rgba(255,255,255,.2) inset;width:70px;text-align:center;line-height:30px;vertical-align:middle;font-size:50px;color:#999;position:absolute;left:0;top:0;box-sizing:border-box}.mad-ui-controlinput .controls .duration a:last-child{left:auto;right:0;border-left:none;border-right:thin solid #d6d6d6;border-radius:0 2px 2px 0;font-size:30px;line-height:35px}.mad-ui-controlinput .controls .duration a.dis{color:#bbb;background:#eeeded}.mad-ui-controlinput .controls .duration div{padding-left:5px;border:thin solid #d6d6d6;background:#fff;-webkit-box-shadow:0 1px 1px rgba(255,255,255,.2) inset;box-shadow:0 1px 1px rgba(255,255,255,.2) inset;width:100%;box-sizing:border-box;overflow:hidden}.mad-ui-controlinput .controls .duration div.focus{border-color:#00a5e0}.mad-ui-controlinput .controls .duration div input{border:0;padding:0;background:0 0;font-size:16px;width:100%;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;text-align:center;color:#333;height:35px;line-height:normal;outline:0;vertical-align:top;margin:5px 0}
+.mad-ui-controlinput .control-label {
+  text-align: left;
+  display: block;
+  color: #808080;
+  font-size: 14px;
+  float: none;
+  margin-bottom: 5px;
+  padding: 0px 0 0 15px;
+  width: auto;
+}
+.mad-ui-controlinput .controls {
+  position: relative;
+}
+.mad-ui-controlinput .controls .duration {
+  margin-left: 15px;
+  margin-right: 0;
+  position: relative;
+  padding-left: 70px;
+  padding-right: 70px;
+  width: 40%;
+}
+.mad-ui-controlinput .controls .duration a {
+  text-decoration: none;
+  word-wrap: break-word;
+  border-top: thin solid #d6d6d6;
+  border-bottom: thin solid #d6d6d6;
+  border-left: thin solid #d6d6d6;
+  background-color: #fcfcfc;
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#f5f5f5));
+  background-image: -moz-linear-gradient(center top, #ffffff, #f5f5f5);
+  -moz-border-radius: 2px 0 0 2px;
+  border-radius: 2px 0 0 2px;
+  -webkit-box-shadow: 0 1px 1px rgba(255, 255, 255, 0.2) inset;
+  box-shadow: 0 1px 1px rgba(255, 255, 255, 0.2) inset;
+  width: 70px;
+  text-align: center;
+  height: 42px;
+  line-height: 30px;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 50px;
+  color: #999;
+  position: absolute;
+  left: 0px;
+  top: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.mad-ui-controlinput .controls .duration a:last-child {
+  left: auto;
+  right: 0;
+  border-left: none;
+  border-right: thin solid #d6d6d6;
+  border-radius: 0 2px 2px 0;
+  font-size: 30px;
+  line-height: 35px;
+}
+.mad-ui-controlinput .controls .duration a.dis {
+  color: #bbb;
+  background: #eeeded;
+}
+.mad-ui-controlinput .controls .duration div {
+  padding-left: 5px;
+  border: thin solid #d6d6d6;
+  height: 42px;
+  background: #fff;
+  -webkit-box-shadow: 0 1px 1px rgba(255, 255, 255, 0.2) inset;
+  box-shadow: 0 1px 1px rgba(255, 255, 255, 0.2) inset;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  display: inline-block;
+  overflow: hidden;
+}
+.mad-ui-controlinput .controls .duration div.focus {
+  border-color: #00a5e0;
+}
+.mad-ui-controlinput .controls .duration div input {
+  border: 0;
+  padding: 0;
+  background: none;
+  outline: none;
+  font-size: 16px;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  text-align: center;
+  color: #333;
+  height: 35px;
+  line-height: normal;
+  outline: medium none;
+  vertical-align: top;
+  margin: 5px 0;
+}

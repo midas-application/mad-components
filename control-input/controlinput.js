@@ -1,1 +1,153 @@
-define(function(t,s,i){var o=t("../../util/util"),n=function(t,s,i){this.container=t,this.options={label:"数量",defaultValue:1,maxAmount:10,minAmount:1,realCheck:!1,disableClass:"dis",addClass:"add",showHandelChar:!0},o.fn.extend(this.options,s),this.isValid(this.options.defaultValue)||(this.options.defaultValue=this.options.minAmount),this.html='<div class="mad-ui-controlinput">'+(this.options.label?'<label class="control-label">{label}</label>':"")+'<div class="controls"><div class="duration"><a href="javascript:void(0);" class="icon-reduce {reduceClass}">'+(this.options.showHandelChar?"-":"")+'</a><div class="dur-ipt focus"><input type="text" pattern="[0-9]*" type="tel" value="{defaultValue}" maxlength="'+String(this.options.maxAmount).length+'"></div><a href="javascript:void(0);" class="icon-increase" {addClass}>'+(this.options.showHandelChar?"+":"")+"</a></div></div></div>",this.callbacks={},o.fn.extend(this.callbacks,i),this._init(),this._bindEvent()};n.prototype={_init:function(){var t=o.string.format(this.html,{defaultValue:this.options.defaultValue,label:this.options.label,reduceClass:this.options.defaultValue<=this.options.minAmount?this.options.disableClass:"",addClass:this.options.defaultValue>=this.options.maxAmount?this.options.disableClass:""}),s=o.dom.toDom(t);this.container.appendChild(s),this.inputDom=o.$("input",s),this.addDom=o.$(".icon-increase",s),this.reduceDom=o.$(".icon-reduce",s),this.callbacks.onSelect&&this.callbacks.onSelect(this.options.defaultValue)},getValue:function(){return parseFloat(this.inputDom.value)},setValue:function(t){this.isValid(t)?(this.inputDom.value=t,t!=this.options.defaultValue&&(this.options.defaultValue=t,this.callbacks.onSelect&&this.callbacks.onSelect(this.options.defaultValue)),t<=this.options.minAmount?(o.dom.removeClass(this.addDom,this.options.disableClass),o.dom.addClass(this.reduceDom,this.options.disableClass)):t>=this.options.maxAmount?(o.dom.removeClass(this.reduceDom,this.options.disableClass),o.dom.addClass(this.addDom,this.options.disableClass)):(o.dom.removeClass(this.reduceDom,this.options.disableClass),o.dom.removeClass(this.addDom,this.options.disableClass))):t<this.options.minAmount?this.setValue(this.options.minAmount):t>this.options.maxAmount&&this.setValue(this.options.maxAmount)},isValid:function(t){return t="undefined"!=typeof t?t:this.getValue(),t&&t>=this.options.minAmount&&t<=this.options.maxAmount},_bindEvent:function(){var t=this,s=function(s){var i=t.getValue(),o=s?i+1:i-1;t.setValue(o)};if(this.options.supportTouch){var i="ontouchstart"in window,n=i?"touchstart":"mousedown",e=i?"touchend":"mouseup",a=function(t){s(t),o.fn.delayRun("inputControl",function(){a(t)},200)},l=function(){o.fn.delayRun("inputControl",function(){},0)};o.event.on(this.addDom,n,function(t){t.preventDefault(),a(!0)}),o.event.on(this.reduceDom,n,function(t){t.preventDefault(),a()}),o.event.on(this.addDom,e,function(){l()}),o.event.on(this.reduceDom,e,function(){l()})}else o.event.on(this.addDom,"click",function(){s(!0)}),o.event.on(this.reduceDom,"click",function(){s()});var u=o.ua.iOS?"input":"keyup";o.event.on(this.inputDom,u,function(){if(this.value.length>0){var s=o.number.convertToNumber(this.value);t.options.realCheck?t.setValue(s):t.value=s}}),o.event.on(this.inputDom,"blur",function(){var s=o.number.convertToNumber(this.value);t.setValue(s)}),o.event.on(this.inputDom,"focus",function(){t.callbacks.onFocus&&t.callbacks.onFocus(this)})}},i.exports=s=n});
+/**
+ * Created by timlv on 2014/11/28.
+ */
+define(function (require, exports, module) {
+    var Util = require('../../mad-util/util');
+    var uiComponent = function (container, options, callbacks) {
+        this.container = container;
+        this.options = {
+            label: "数量",
+            defaultValue: 1,
+            maxAmount: 10,
+            minAmount: 1,
+            realCheck: false,
+            disableClass: "dis",
+            addClass: "add",
+            showHandelChar: true
+        };
+        Util.fn.extend(this.options, options);
+        if (!this.isValid(this.options.defaultValue)) {
+            this.options.defaultValue = this.options.minAmount;
+        }
+        this.html = '<div class="mad-ui-controlinput">' +
+        (this.options.label ? '<label class="control-label">{label}</label>' : '') +
+        '<div class="controls">' +
+        '<div class="duration">' +
+        '<a href="javascript:void(0);" class="icon-reduce {reduceClass}">' + (this.options.showHandelChar ? '-' : '') + '</a>' +
+        '<div class="dur-ipt focus">' +
+        '<input type="text" pattern="[0-9]*" type="tel" value="{defaultValue}" maxlength="' + String(this.options.maxAmount).length + '">' +
+        '</div>' +
+        '<a href="javascript:void(0);" class="icon-increase" {addClass}>' + (this.options.showHandelChar ? '+' : '') + '</a>' +
+        '</div>' +
+        '</div>' +
+        '</div>';
+        this.callbacks = {};
+        Util.fn.extend(this.callbacks, callbacks);
+        this._init();
+        this._bindEvent();
+    };
+    uiComponent.prototype = {
+        _init: function () {
+            var html = Util.string.format(this.html, {
+                defaultValue: this.options.defaultValue,
+                label: this.options.label,
+                reduceClass: this.options.defaultValue <= this.options.minAmount ? this.options.disableClass : "",
+                addClass: this.options.defaultValue >= this.options.maxAmount ? this.options.disableClass : ""
+            });
+            var newNode = Util.dom.toDom(html);
+            this.container.appendChild(newNode);
+            this.inputDom = Util.$("input", newNode);
+            this.addDom = Util.$(".icon-increase", newNode);
+            this.reduceDom = Util.$(".icon-reduce", newNode);
+            this.callbacks.onSelect && this.callbacks.onSelect(this.options.defaultValue);
+        },
+        getValue: function () {
+            return parseFloat(this.inputDom.value);
+        },
+        setValue: function (val) {
+            if (this.isValid(val)) {
+                this.inputDom.value = val;
+                if (val != this.options.defaultValue) {
+                    this.options.defaultValue = val;
+                    this.callbacks.onSelect && this.callbacks.onSelect(this.options.defaultValue);
+                }
+                if (val <= this.options.minAmount) {
+                    Util.dom.removeClass(this.addDom, this.options.disableClass);
+                    Util.dom.addClass(this.reduceDom, this.options.disableClass);
+                } else if (val >= this.options.maxAmount) {
+                    Util.dom.removeClass(this.reduceDom, this.options.disableClass);
+                    Util.dom.addClass(this.addDom, this.options.disableClass);
+                } else {
+                    Util.dom.removeClass(this.reduceDom, this.options.disableClass);
+                    Util.dom.removeClass(this.addDom, this.options.disableClass);
+                }
+            } else {
+                if (val < this.options.minAmount) {
+                    this.setValue(this.options.minAmount);
+
+                } else if (val > this.options.maxAmount) {
+                    this.setValue(this.options.maxAmount);
+                }
+            }
+        },
+        isValid: function (val) {
+            val = typeof val != "undefined" ? val : this.getValue();
+            return val && val >= this.options.minAmount && val <= this.options.maxAmount;
+        },
+        _bindEvent: function () {
+            var self = this;
+            var setValue = function (isAdd) {
+                var val = self.getValue(), newVal = isAdd ? (val + 1) : (val - 1);
+                self.setValue(newVal);
+            };
+            if (!this.options.supportTouch) {
+                Util.event.on(this.addDom, 'click', function () {
+                    setValue(true);
+                });
+                Util.event.on(this.reduceDom, 'click', function () {
+                    setValue();
+                });
+            } else {
+                var hasTouch = 'ontouchstart' in window,
+                    startEvt = hasTouch ? "touchstart" : "mousedown",
+                    moveEvt = hasTouch ? "touchmove" : "mousemove",
+                    cancelEvt = hasTouch ? "touchcancel" : "mouseout",
+                    endEvt = hasTouch ? "touchend" : "mouseup";
+                var roll = function (isAdd) {
+                    setValue(isAdd);
+                    Util.fn.delayRun("inputControl", function () {
+                        roll(isAdd);
+                    }, 200);
+                };
+                var delRoll = function () {
+                    Util.fn.delayRun("inputControl", function () {
+                    }, 0);
+                };
+                Util.event.on(this.addDom, startEvt, function (e) {
+                    e.preventDefault();
+                    roll(true);
+                });
+                Util.event.on(this.reduceDom, startEvt, function (e) {
+                    e.preventDefault();
+                    roll();
+                });
+                Util.event.on(this.addDom, endEvt, function () {
+                    delRoll();
+                });
+                Util.event.on(this.reduceDom, endEvt, function () {
+                    delRoll();
+                });
+            }
+            var mouseEv = Util.ua.iOS ? "input" : "keyup";
+            Util.event.on(this.inputDom, mouseEv, function () {
+                if (this.value.length > 0) {
+                    var value = Util.number.convertToNumber(this.value);
+                    if (self.options.realCheck) {//不允许输入非法内容
+                        self.setValue(value);
+                    } else {
+                        self.value = value;
+                    }
+                }
+            });
+            Util.event.on(this.inputDom, 'blur', function () {
+                var value = Util.number.convertToNumber(this.value);
+                self.setValue(value);
+            });
+            Util.event.on(this.inputDom, 'focus', function () {
+                self.callbacks.onFocus && self.callbacks.onFocus(this);
+            });
+        }
+    };
+    module.exports = exports = uiComponent;
+});
+
