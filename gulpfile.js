@@ -15,9 +15,9 @@ var file = {
         less:["src/reset.less"]
     },
     components:{
-        js:["src/components/**/*.js"],
-        less:["src/components/**/*.less"],
-        css:["src/components/**/*.css"]
+        js:["src/mad-components/**/*.js"],
+        less:["src/mad-components/**/*.less"],
+        css:["src/mad-components/**/*.css"]
     }
 };
 //for demo
@@ -37,7 +37,7 @@ gulp.task('css:components',function() {
             path.extname = ".css";
             return path;
         }))
-        .pipe(gulp.dest("src/components/"));
+        .pipe(gulp.dest("src/mad-components/"));
 });
 gulp.task('js:components',function() {
     gulp.src(file.components.js).
