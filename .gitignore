@@ -1,10 +1,9 @@
 *.idea
 .idea
 .cache
-.bowerrc
 idea
 node_modules/
-src/util/
+src/mad-util/
 static/js/template/
 static/js/mod/mqqdebug.js
 

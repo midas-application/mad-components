@@ -2,7 +2,7 @@
  * Created by timlv on 2014/11/28.
  */
 define(function (require, exports, module) {
-    var Util = require('../../util/util');
+    var Util = require('../../mad-util/util');
     var uiComponent = function (container, options, callbacks) {
         this.container = container;
         this.options = {
